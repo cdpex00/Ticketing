@@ -1,0 +1,29 @@
+.b-cuadrados{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.b-columns{
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    flex-direction: column;
+    line-height: 0.2;
+    
+}
+.dots{
+    padding-top: 30px;
+    padding-left: 80px;
+}
+.diagonal{
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 33%;
+}
+.linea{
+    width: 100%;
+}
+.col-lg-4{}
