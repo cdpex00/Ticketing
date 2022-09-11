@@ -1,9 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./Ticketing.css";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import image from "../assets/ticketG.svg"
+import image1 from "../assets/ticketR.svg"
 
 const Ticketing = () => {
   const [tickets, setTickets] = useState([]);
@@ -18,58 +17,43 @@ const Ticketing = () => {
   }, []);
 
   return (
-    <div className="Tickets">
+    <div className="row align-items-center ">
       {tickets.map((ticket) => (
         /* {ticket.present === true ? <img src="/ticket-fill.svg"></img> : <img src="/ticket.svg"></img>}; */
-        <Container>
-          <Row>
-            <Col>
-              {ticket.present === true ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-ticket-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3h-13Z" />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-ticket"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z" />
-                </svg>
-              )}
-              {ticket.firstName} {ticket.lastName}
-            </Col>
-            <Col>ID</Col>
-            <Col>Nº de Ticket</Col>
-          </Row>
-          <Row>
-            <Col>
-              {ticket.present === true ? "Ha entrado" : "No ha entrado"}
-            </Col>
-            <Col>{ticket._id}</Col>
-            <Col>{ticket._ticket}</Col>
-          </Row>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-three-dots"
-            viewBox="0 0 16 16"
-          >
-            <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
-          </svg>
-        </Container>
+        <>
+          <div className="col-3 ">
+            <br />
+            {ticket.firstName} {ticket.lastName}
+            <br />
+            {ticket.present === true ? (
+              <img src={image} alt="ticketGreen"/>
+            ) : (
+              <img src={image1} alt="ticketRed"/>
+            )}
+            {ticket.present === true ? "Ha entrado" : "No ha entrado"}
+          </div>
+          <div className="col-3">
+            ID
+            <br />
+            {ticket._id}
+          </div>
+          <div className="col-3">
+            Nº de Ticket<br/>
+            {ticket.ticket}
+          </div>
+          <div className="col-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-three-dots"
+              viewBox="0 0 16 16"
+            >
+              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+            </svg>
+          </div>
+        </>
       ))}
     </div>
   );
