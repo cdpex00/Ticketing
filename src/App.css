@@ -36,11 +36,8 @@
     transform: rotate(360deg);
   }
 }
-
 .n-div{
   float: left;
   width: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  height: 300px;
 }
+
