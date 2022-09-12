@@ -7,6 +7,7 @@ import image4 from "../assets/stats.png";
 import image5 from "../assets/ticket.png";
 import image6 from "../assets/question.png";
 
+
 const NavBarCom = () => {
   return (
     <div className="n-div">
