@@ -1,0 +1,61 @@
+.bg{
+    translate: 10% ;
+}
+.modal {
+  background-color: #efefef;
+  color: black;
+  width: 600px;
+  height: 300px;
+  border-radius: 30px;
+  position: relative;
+}
+.close {
+  background: #000;
+  color: white;
+  float: right;
+ 
+}
+.name {
+  width: 80px;
+  height: 20px;
+  justify-items: center;
+  margin-left: 70px;
+inline-size: auto;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.05;
+}
+.picture {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 50px;
+}
+.info {
+  width: 100px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 33%;
+  line-height: 0.05;
+}
+.header{
+    display: flex;
+}
+.body-modal{
+    display: flex;
+    flex: wrap;
+    flex-direction: row;
+    padding-top: 100px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    }
+
+    .direction{
+        line-height: 0.2;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
