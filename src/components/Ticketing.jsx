@@ -1,11 +1,18 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import "./Ticketing.css";
-import image from "../assets/ticketG.svg"
-import image1 from "../assets/ticketR.svg"
+import image from "../assets/ticketG.svg";
+import image1 from "../assets/ticketR.svg";
+import { useModal } from "./hooks/useModal";
+// import image2 from "../assets/dots.png";
+import Modal from "./Modal";
+
+
 
 const Ticketing = () => {
+  const [isOpen, openModal, closeModal]= useModal(false);
   const [tickets, setTickets] = useState([]);
+
+  
 
   useEffect(() => {
     axios
@@ -26,9 +33,9 @@ const Ticketing = () => {
             {ticket.firstName} {ticket.lastName}
             <br />
             {ticket.present === true ? (
-              <img src={image} alt="ticketGreen"/>
+              <img src={image} alt="ticketGreen" />
             ) : (
-              <img src={image1} alt="ticketRed"/>
+              <img src={image1} alt="ticketRed" />
             )}
             {ticket.present === true ? "Ha entrado" : "No ha entrado"}
           </div>
@@ -38,20 +45,13 @@ const Ticketing = () => {
             {ticket._id}
           </div>
           <div className="col-3">
-            Nº de Ticket<br/>
+            Nº de Ticket
+            <br />
             {ticket.ticket}
           </div>
           <div className="col-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-three-dots"
-              viewBox="0 0 16 16"
-            >
-              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
-            </svg>
+            <button onClick={openModal}> ... </button>
+            <Modal isOpen={openModal} closeModal ={closeModal}> </Modal>
           </div>
         </>
       ))}
