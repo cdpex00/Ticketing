@@ -6,16 +6,21 @@ import image3 from "../assets/glass.png";
 import image4 from "../assets/stats.png";
 import image5 from "../assets/ticket.png";
 import image6 from "../assets/question.png";
+import image7 from "../assets/cuadrado.png"
+import "./NavBar.css"
 
 
 const NavBarCom = () => {
   return (
     <div className="n-div">
-      <div>
-        <img src={image} alt="dots" />
+      <div className="n-image">
+        <img src={image}  alt="dots" />
       </div>
       <div>
         <img src={image1} alt="logo" />
+      </div>
+      <div>
+        <img src={image7} alt="cuadrado" />
       </div>
       <div>
         <img src={image2} alt="head" />
