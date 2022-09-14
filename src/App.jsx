@@ -6,9 +6,12 @@ import Ticketing from "./components/Ticketing";
 function App() {
   return (
     <div className="App">
-      <NavBarCom className="n-div" />
-      <Header />
-      <Ticketing />
+      <NavBarCom />
+      <div className="text">
+        <Header />
+        <Ticketing />
+      </div>
+
       {/* <Modal/> */}
     </div>
   );

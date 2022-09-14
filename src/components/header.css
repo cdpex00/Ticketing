@@ -1,6 +1,10 @@
-.b-tittle{
-    line-height: 0.2;
-    width: 100%;
-    padding-top: 100px;
-    padding-right: 450px;
+.header {
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80%;
+    float: left;
+    
+    
 }

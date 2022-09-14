@@ -1,6 +1,60 @@
-.n-div{
-    line-height: 4;
-}
-.n-image{
+/* .content-menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 5%;
+    float: left;
+   
+} */
+    
+ 
 
+.content-menu-up{
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+    gap: 40px;
 }
+
+.content-menu-up.hover{
+    list-style: none;
+    background: #fff;
+    outline: none;
+    height: 100%;
+   
+    }
+  
+   
+
+
+.content-menu-down{
+    width: 100px;
+    padding-top: 100px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+    
+}
+ 
+/* .stats-imagen{
+    align-items: top;
+    justify-content: top;
+    justify-items: top;
+} */
+.content-menu-down>button{
+    margin-top: 2rem;
+}
+
+/* .ant-layout-sider {
+    position: relative;
+    min-width: 0;
+    background: white;
+    transition: all 0.2s;
+} */
+
+.content-menu-down>button:hover{
+    margin-right: 0.1rem;
+    border-left:4px black solid;
+} 

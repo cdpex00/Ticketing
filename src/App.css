@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-logo {
@@ -25,8 +26,8 @@
     transform: rotate(360deg);
   }
 }
-.n-div{
-  float: left;
-  width: 40px;
-}
 
+.text{
+  width: 100vw;
+  margin:10%;
+}
