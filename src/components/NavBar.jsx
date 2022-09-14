@@ -1,43 +1,57 @@
 import React from "react";
-import image from "../assets/lanes.png";
-import image1 from "../assets/logo.png";
-import image2 from "../assets/head.png";
-import image3 from "../assets/glass.png";
-import image4 from "../assets/stats.png";
-import image5 from "../assets/ticket.png";
-import image6 from "../assets/question.png";
-import image7 from "../assets/cuadrado.png"
-import "./NavBar.css"
-
+import lanes from "../assets/menu/lanes.svg";
+import logo from "../assets/menu/logo.svg";
+import square from "../assets/menu/squares.svg";
+import studies from "../assets/menu/studies.svg";
+import glass from "../assets/menu/glass.svg";
+import stats from "../assets/menu/stats.svg";
+import ticket from "../assets/menu/ticket.svg";
+import question from "../assets/menu/question.svg";
+import "./NavBar.css";
+import { Button } from "antd";
 
 const NavBarCom = () => {
   return (
-    <div className="n-div">
-      <div className="n-image">
-        <img src={image}  alt="dots" />
+    <>
+      <div className="content-menu">
+        <div className="content-menu-up">
+          <Button type="link">
+            {" "}
+            <img src={lanes} alt="lanes" />{" "}
+          </Button>
+
+          <Button type="link">
+            <img src={logo} alt="logo" />
+          </Button>
+        </div>
+
+        <div className="content-menu-down">
+          <Button type="link">
+            <img src={square} alt="square" />
+          </Button>
+
+          <Button type="link">
+            <img src={studies} alt="studies" />
+          </Button>
+
+          <Button type="link">
+            <img src={glass} alt="glass" />
+          </Button>
+
+          <Button type="link" className="stats-imagen">
+            <img src={stats} alt="ticket" />
+          </Button>
+
+          <Button type="link">
+            <img src={ticket} alt="ticket" />
+          </Button>
+
+          <Button type="link">
+            <img src={question} alt="question" />
+          </Button>
+        </div>
       </div>
-      <div>
-        <img src={image1} alt="logo" />
-      </div>
-      <div>
-        <img src={image7} alt="cuadrado" />
-      </div>
-      <div>
-        <img src={image2} alt="head" />
-      </div>
-      <div>
-        <img src={image3} alt="glass" />
-      </div>
-      <div>
-        <img src={image4} alt="stats" />
-      </div>
-      <div>
-        <img src={image5} alt="question" />
-      </div>
-      <div>
-        <img src={image6} alt="head" />
-      </div>
-    </div>
+    </>
   );
 };
 
